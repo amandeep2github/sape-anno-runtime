@@ -1,0 +1,10 @@
+com.sapient.tdi.anno.model.Employee
+
+http://localhost:8080/anno-runtime/listEmployees.json?domainClassName=com.sapient.tdi.anno.domain.Employee
+
+jdbc:h2:tcp://localhost:8085/D:/CodeConcepts/Java/SapientSessionAnnotation/code/runtime-processing/annotation-runtime-processing/db/test/emp;LOCK_TIMEOUT=10000
+
+
+jdbc:h2:tcp://localhost:8082/D:/CodeConcepts/Java/SapientSessionAnnotation/code/runtime-processing/annotation-runtime-processing/db/test/emp;LOCK_TIMEOUT=10000
+
+jdbc:h2:tcp://localhost/D:/CodeConcepts/Java/SapientSessionAnnotation/code/runtime-processing/annotation-runtime-processing/db/test/emp;LOCK_TIMEOUT=10000

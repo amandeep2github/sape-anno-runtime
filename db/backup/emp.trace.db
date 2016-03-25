@@ -1,0 +1,24 @@
+10-27 23:09:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE EMPLOYEE(ID INT PRIMARY,[*] FIRST_NAME VARCHAR(20), LAST_NAME VARCHAR(20), DEPARTMENT VARCHAR(20), TITLE VARCHAR(50), SALARY NUMERIC, DOJ DATE) "; expected "KEY"; SQL statement:
+create table Employee(id int primary, first_name varchar(20), last_name varchar(20), department varchar(20), title varchar(50), salary numeric, doj date) [42001-181]
+11-22 18:10:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "Research Associate" not found; SQL statement:
+update employee set title="Research Associate" where id=1003 [42122-181]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Update.prepare(Update.java:188)
+	at org.h2.command.Parser.prepareCommand(Parser.java:247)
+	at org.h2.engine.Session.prepareLocal(Session.java:446)
+	at org.h2.engine.Session.prepareCommand(Session.java:388)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1189)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:171)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:159)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1390)
+	at org.h2.server.web.WebApp.query(WebApp.java:1063)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1025)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1012)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.lang.Thread.run(Unknown Source)

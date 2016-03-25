@@ -1,0 +1,2 @@
+check inherited annotaions can be assigned to super class
+what is @inherited annotations, not working for employee manager example, may be only for runtime

@@ -1,0 +1,9 @@
+{
+	 "data":[
+	     {"City":"Gurgaon","State":"Haryana","Std Code":"0124"},
+	     {"City":"Jind","State":"Haryana","Std Code":"01681"},
+	     {"City":"Delhi","State":"Delhi","Std Code":"0111"}
+	 ],
+	 "data_title":"City STD Codes",
+	 "color":{"column":"Std Code"}
+}

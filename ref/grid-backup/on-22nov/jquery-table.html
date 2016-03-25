@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>table</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="jquery.js"></script>
+	<script>
+     $(function() {
+        
+        $('#btn').click(function(){
+          $.ajax({
+            url : 'data.json',  // change url here
+            contentType : 'json',
+            success : function(res){
+              var response = res.data;
+              var tr = '<tr>'
+              for (var j = 0; j < Object.keys(response[0]).length; j++) {
+                   var th = '<th>';
+                   th+= Object.keys(response[0])[j] + '</th>';
+                   tr+=th;
+              };
+              tr+= '</tr>'; 
+               $('thead').append(tr);
+              for (var i = 0; i < response.length; i++) {
+                var tr = '<tr>';
+                for (var j = 0; j < Object.keys(response[i]).length; j++) {
+                   var td = '<td>';
+                   td+= response[i][Object.keys(response[i])[j]] + '</td>';
+                   tr+=td;
+                };
+                tr+='</tr>';
+                 $('tbody').append(tr);
+              };
+
+            },
+            error : function(){
+              alert('error');
+            }
+          })
+        	
+        })
+     })
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1>table</h1>
+		<button id="btn">Generate Table</button>
+		<hr>
+		<table id="table" class='table table-bordered table-striped'>
+			<thead>
+				
+			</thead>
+			<tbody>
+				
+			</tbody>
+		</table>	
+	</div>
+</body>
+</html>

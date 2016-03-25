@@ -1,0 +1,7 @@
+{
+	 "data":[
+	     {"FirstName":"John","LastName":"Machangie"}
+	 ],
+	 "data_title":"Person Info",
+	 "color":{"column":"FirstName"}
+}
